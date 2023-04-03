@@ -2,6 +2,8 @@
 var userEntry = $("#userEntry");
 
 
+
+
 // Current Day
 var date = moment().format("MMMM Do, YYYY");
 var currentDate = function(){
@@ -21,17 +23,29 @@ var currentHour = moment().hour();
 //Storing data
 $(document).ready(function(){
     $(".saveBtn").on("click", function(){        
-        var userEntry = 
-        var time = 
+        
+        var time = $(this).parent().attr("id");
+        var userEntry = $(this).siblings(".description").val();
      
+
     //key value pair    
         localStorage.setItem(time, userEntry);
     });
 
 // Retrieving data
-    $("#9am .description").val(localStorage.getItem("9am"));
-
-
+    $( "#9am .description").val(localStorage.getItem ("9am"));    
+    $("#10am .description").val(localStorage.getItem("10am"));
+    $("#11am .description").val(localStorage.getItem("11am"));
+    $("#12pm .description").val(localStorage.getItem("12pm"));
+    $("#13pm .description").val(localStorage.getItem("13pm"));
+    $("#14pm .description").val(localStorage.getItem("14pm"));
+    $("#15pm .description").val(localStorage.getItem("15pm"));
+    $("#16pm .description").val(localStorage.getItem("16pm"));
+    $("#17pm .description").val(localStorage.getItem("17pm"));
+    $("#18pm .description").val(localStorage.getItem("18pm"));
+    $("#19pm .description").val(localStorage.getItem("19pm"));
+    $("#20pm .description").val(localStorage.getItem("20pm"));
+    $("#21pm .description").val(localStorage.getItem("21pm"));
 });
 
 
@@ -39,15 +53,43 @@ $(document).ready(function(){
 
 
 
- 
+
+
 
 
 // * Color-code each timeblock based on past, present, and future when the timeblock is viewed.
 
-// * Persist events between refreshes of a page
+
+
+
+
+
+
+
+
+
+
+
+
+// var submit = document.querySelector("#submit");
+// var submission = document.querySelector("#response");
+
+//*Prevent default action
+// function showResponse(event) {
+//    
+//     event.preventDefault();
+//     console.log(event);    
+//   }
+    
+
+//*Add listener to submit element
+//   submit.addEventListener("click");
+
+
+
 
 
 // Resources used:
-// https://www.w3schools.com/js/js_json_stringify.asp
+// https://api.jquery.com/parent/
 // https://api.jquery.com/siblings/
 // https://api.jquery.com/data/#data1
