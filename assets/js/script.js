@@ -5,5 +5,5 @@ var currentDate = function(){
 };
 currentDate();
 
-// Current hour
+// Render hour
 var currentHour = moment().hour();
