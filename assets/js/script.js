@@ -2,8 +2,6 @@
 var userEntry = $("#userEntry");
 
 
-
-
 // Current Day
 var date = moment().format("MMMM Do, YYYY");
 var currentDate = function(){
@@ -12,13 +10,13 @@ var currentDate = function(){
 currentDate();
 
 
-// Render hour
-var currentHour = moment().hour();
+// Render hour - not showing
+// var currentHour = moment().hour();
+var currentHour = () => {
+    clockEl.text(moment().format("kk:mm:ss"));
+  };    
 
-
-// * Allow a user to enter an event when they click a timeblock
-// * Save the event in local storage when the save button is clicked in that timeblock.
-
+  
 
 //Storing data
 $(document).ready(function(){
@@ -51,39 +49,39 @@ $(document).ready(function(){
 
 
 
+// * Color-code each timeblock - not working
+
+var timeColor = (key) => {    
+    var currentHour = moment().hour();      
+    var isPast = currentHour > key;
+    var isFuture = currentHour < key;
+
+ // check if it is past, future or present
+ if (isPast) {
+    return "past";
+  } else if (isFuture) {
+    return "future";
+  } else {
+    return "present";
+  }
+};
 
 
 
 
 
 
-// * Color-code each timeblock based on past, present, and future when the timeblock is viewed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var submit = document.querySelector("#submit");
-// var submission = document.querySelector("#response");
 
 //*Prevent default action
-// function showResponse(event) {
+// function ...(event) {
 //    
 //     event.preventDefault();
 //     console.log(event);    
 //   }
-    
+  
+//*Add listener to save element
+//   save.addEventListener("click");
 
-//*Add listener to submit element
-//   submit.addEventListener("click");
 
 
 
