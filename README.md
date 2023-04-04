@@ -38,10 +38,10 @@ The following steps show how the user can navigate the calendar application:
 <br>
 
 Accessing stored entry/data from local storage:
-1. Within the browser window select the 'right-click' on the mouse/trackpad
+1. Within the browser window 'right-click' on the mouse/trackpad
 3. Then select 'Inspect' from the menu 
 4. Then 'Application' within the inspector box
-5. Then within Storage/ Local Storage / file://
+5. Then within Storage/ Local Storage / File
 6. The Key (timeblock) and Value (saved entry/data) will then be displayed
 
 
